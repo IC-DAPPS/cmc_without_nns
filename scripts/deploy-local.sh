@@ -58,3 +58,5 @@ dfx canister create usdx_ledger --specified-id irorr-5aaaa-aaaak-qddsq-cai
 # Deploy USDx Ledger Locally
 ./scripts/deploy-local-ledger.sh
 
+# Deploy USDx Index canister locally
+./scripts/deploy-local-index.sh
