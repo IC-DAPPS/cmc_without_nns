@@ -1,15 +1,5 @@
 {
     "canisters": {
-        "usdx_ledger": {
-            "type": "custom",
-            "candid": "https://raw.githubusercontent.com/dfinity/ic/5ba1412f9175d987661ae3c0d8dbd1ac3e092b7d/rs/rosetta-api/icrc1/ledger/ledger.did",
-            "wasm": "https://download.dfinity.systems/ic/5ba1412f9175d987661ae3c0d8dbd1ac3e092b7d/canisters/ic-icrc1-ledger.wasm.gz"
-        },
-        "usdx_index": {
-            "type": "custom",
-            "candid": "https://raw.githubusercontent.com/dfinity/ic/d628aa32d72565c9e5258d033b3c0be194c77b24/rs/rosetta-api/icrc1/index-ng/index-ng.did",
-            "wasm": "https://download.dfinity.systems/ic/d628aa32d72565c9e5258d033b3c0be194c77b24/canisters/ic-icrc1-index-ng.wasm.gz"
-        },
         "icp_ledger": {
             "type": "custom",
             "candid": "https://raw.githubusercontent.com/dfinity/ic/5ba1412f9175d987661ae3c0d8dbd1ac3e092b7d/rs/rosetta-api/icp_ledger/ledger.did",
@@ -43,11 +33,7 @@
             "wasm": "https://github.com/dfinity/cycles-ledger/releases/download/cycles-ledger-v1.0.5/cycles-ledger.wasm.gz",
             "candid": "https://github.com/dfinity/cycles-ledger/releases/download/cycles-ledger-v1.0.5/cycles-ledger.did",
             "specified_id": "um5iw-rqaaa-aaaaq-qaaba-cai"
-        },
-        "root": {
-			"main": "src/root/main.mo",
-			"type": "motoko"
-		}
+        }
     },
     "defaults": {
         "build": {

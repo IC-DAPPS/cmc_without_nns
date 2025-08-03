@@ -51,12 +51,3 @@ dfx deploy cycle_minting_canister --specified-id rkp4c-7iaaa-aaaaa-aaaca-cai  --
 dfx deploy cycles_ledger --specified-id um5iw-rqaaa-aaaaq-qaaba-cai --argument '(
   variant { Init= record { max_blocks_per_request = 1; index_id = null }}
 )'
-
-# Creating Local USDx Ledger 
-dfx canister create usdx_ledger --specified-id irorr-5aaaa-aaaak-qddsq-cai
-
-# Deploy USDx Ledger Locally
-./scripts/deploy-local-ledger.sh
-
-# Deploy USDx Index canister locally
-./scripts/deploy-local-index.sh
