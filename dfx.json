@@ -13,8 +13,8 @@
         },
         "cycle_minting_canister": {
             "type": "custom",
-            "candid": "https://raw.githubusercontent.com/dfinity/ic/2e921c9adfc71f3edc96a9eb5d85fc742e7d8a9f/rs/nns/cmc/cmc.did",
-            "wasm": "https://download.dfinity.systems/ic/2e921c9adfc71f3edc96a9eb5d85fc742e7d8a9f/canisters/cycles-minting-canister.wasm.gz",
+            "candid": "https://raw.githubusercontent.com/dfinity/ic/21a02f483fa8028568f4c2c5920ec960c87269c0/rs/nns/cmc/cmc.did",
+            "wasm": "https://download.dfinity.systems/ic/21a02f483fa8028568f4c2c5920ec960c87269c0/canisters/cycles-minting-canister.wasm.gz",
             "specified_id": "rkp4c-7iaaa-aaaaa-aaaca-cai",
             "remote": {
                 "id": {
