@@ -51,3 +51,5 @@ dfx deploy cycle_minting_canister --specified-id rkp4c-7iaaa-aaaaa-aaaca-cai  --
 dfx deploy cycles_ledger --specified-id um5iw-rqaaa-aaaaq-qaaba-cai --argument '(
   variant { Init= record { max_blocks_per_request = 1; index_id = null }}
 )'
+
+dfx deploy exchange_rate_canister --specified-id uf6dk-hyaaa-aaaaq-qaaaq-cai
