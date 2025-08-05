@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
         resultContainer.textContent = "Calling...";
         try {
             const result = await cmc.get_build_metadata();
-            resultContainer.textContent = JSON.stringify(result, null, 2);
+            // get_build_metadata returns a string, not JSON, so display it directly
+            resultContainer.textContent = result;
         } catch (error) {
             console.error(error);
             resultContainer.textContent = "Error: " + error.message;
@@ -56,7 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
         resultContainer.textContent = "Calling...";
         try {
             const result = await cmc.get_default_subnets();
-            resultContainer.textContent = JSON.stringify(result, null, 2);
+            // Handle BigInt serialization
+            const serializedResult = JSON.stringify(result, (key, value) =>
+                typeof value === 'bigint' ? value.toString() : value
+                , 2);
+            resultContainer.textContent = serializedResult;
         } catch (error) {
             console.error(error);
             resultContainer.textContent = "Error: " + error.message;
@@ -81,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Handle BigInt serialization
             const serializedResult = JSON.stringify(result, (key, value) =>
                 typeof value === 'bigint' ? value.toString() : value
-            , 2);
+                , 2);
             resultContainer.textContent = serializedResult;
         } catch (error) {
             console.error(error);
@@ -93,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getPrincipalsAuthorizedDiv = document.createElement("div");
     getPrincipalsAuthorizedDiv.classList.add("function");
     getPrincipalsAuthorizedDiv.innerHTML = `
-        <h3>get_principals_authorized_to_create_canisters_to_subnets</h3>
+        <h3>get_principals_authorized_to_</h3>
         <button id="getPrincipalsAuthorizedBtn">Call</button>
         <pre id="getPrincipalsAuthorizedResult"></pre>
     `;
@@ -104,7 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
         resultContainer.textContent = "Calling...";
         try {
             const result = await cmc.get_principals_authorized_to_create_canisters_to_subnets();
-            resultContainer.textContent = JSON.stringify(result, null, 2);
+            // Handle BigInt serialization
+            const serializedResult = JSON.stringify(result, (key, value) =>
+                typeof value === 'bigint' ? value.toString() : value
+                , 2);
+            resultContainer.textContent = serializedResult;
         } catch (error) {
             console.error(error);
             resultContainer.textContent = "Error: " + error.message;
@@ -126,7 +135,11 @@ document.addEventListener("DOMContentLoaded", () => {
         resultContainer.textContent = "Calling...";
         try {
             const result = await cmc.get_subnet_types_to_subnets();
-            resultContainer.textContent = JSON.stringify(result, null, 2);
+            // Handle BigInt serialization
+            const serializedResult = JSON.stringify(result, (key, value) =>
+                typeof value === 'bigint' ? value.toString() : value
+                , 2);
+            resultContainer.textContent = serializedResult;
         } catch (error) {
             console.error(error);
             resultContainer.textContent = "Error: " + error.message;
